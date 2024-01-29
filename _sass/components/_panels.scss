@@ -160,7 +160,8 @@
 }
 
 .cover-black {
-  @include linear-gradient(140deg, rgba($black,.6) 20%, rgba(darken($black, 20%),.8));
+  background-color: #000000; // 设置纯色背景
+  opacity: 0.6;
 }
 .cover-disabled {
   background: none;
