@@ -2,10 +2,7 @@
 title: LJL & ZYT
 subtitle: Welcome to our homepage
 welcome_message: <a href="https://github.com/onevcat/vno-jekyll" target="_blank">下载这个博客主题</a>
-description: 为所欲为所欲为
-creator: <a href="https://flyindulger.github.io">@YAN_weidan</a>
 
-url: "https://github.com/yanwd628/yanwd628.github.com"
 
 permalink: /:year/:month/:title/
 
