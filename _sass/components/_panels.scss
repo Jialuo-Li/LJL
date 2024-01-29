@@ -159,6 +159,9 @@
   @include linear-gradient(140deg, rgba($slate,.6) 20%, rgba(darken($slate, 20%),.8));
 }
 
+.cover-black {
+  @include linear-gradient(140deg, rgba($black,.6) 20%, rgba(darken($black, 20%),.8));
+}
 .cover-disabled {
   background: none;
 }
