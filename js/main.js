@@ -37,7 +37,7 @@ $(document).ready(function() {
     $('.btn-mobile-menu__icon').toggleClass('fa fa-list fa fa-angle-up animated fadeIn');
   });
 
-  $('.navigation-wrapper .blog-button').click(function() {
+  $('.navigation-wrapper .').click(function() {
     if ($('.navigation-wrapper').css('display') == "block") {
       $('.navigation-wrapper').on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
         $('.navigation-wrapper').toggleClass('visible animated bounceOutUp');
