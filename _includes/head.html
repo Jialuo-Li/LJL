@@ -25,5 +25,17 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
   
   <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
-  
+  <script>
+    // 页面加载完成后执行的JavaScript代码
+    window.onload = function() {
+      var canvas = document.getElementById('myCanvas');
+      if (canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        // 设置填充颜色
+        ctx.fillStyle = '#FF0000';
+        // 在画布上绘制一个矩形
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      }
+    };
+  </script>
 </head>
