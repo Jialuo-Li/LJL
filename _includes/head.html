@@ -129,13 +129,7 @@
         return ret;
     }
 
-
     window.onload = function () {
-      requestAnimationFrame = window.requestAnimationFrame ||
-            window.mozRequestAnimationFrame ||
-            window.webkitRequestAnimationFrame ||
-            window.msRequestAnimationFrame ||
-            window.oRequestAnimationFrame;
         let canvas = document.getElementById('canvas_sakura'),
             cxt;
         document.getElementsByTagName('body')[0].appendChild(canvas);
