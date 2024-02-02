@@ -127,16 +127,18 @@
     }
 
     function startSakura() {
-        stopp()
+		stopp()
         requestAnimationFrame = window.requestAnimationFrame ||
             window.mozRequestAnimationFrame ||
             window.webkitRequestAnimationFrame ||
             window.msRequestAnimationFrame ||
             window.oRequestAnimationFrame;
-        let canvas = document.getElementById('canvas_sakura'), cxt;
-        if (!canvas) {
-            console.error('Canvas element with id "canvas_sakura" not found.');
-        }
+        let canvas = document.createElement('canvas'),
+            cxt;
+        canvas.height = window.innerHeight;
+        canvas.width = window.innerWidth;
+        canvas.setAttribute('style', 'position: fixed;left: 0;top: 0;pointer-events: none;');
+        canvas.setAttribute('id', 'canvas_sakura');
         document.getElementsByTagName('body')[0].appendChild(canvas);
         cxt = canvas.getContext('2d');
         const sakuraList = new SakuraList();
@@ -177,10 +179,10 @@
 
     function stopp() {
         let child = document.getElementById("canvas_sakura");
-      if (child) {
-          child.parentNode.removeChild(child);
-          window.cancelAnimationFrame(stop);
-      }
+	    if (child) {
+	        child.parentNode.removeChild(child);
+	        window.cancelAnimationFrame(stop);
+	    }
     }
 </script>
 </html>
