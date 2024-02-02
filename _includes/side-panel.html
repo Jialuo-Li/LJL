@@ -115,6 +115,7 @@
                   window.webkitRequestAnimationFrame ||
                   window.msRequestAnimationFrame ||
                   window.oRequestAnimationFrame;
+              var canvas = document.getElementById('canvas_sakura');
               document.getElementsByTagName('body')[0].appendChild(canvas);
               cxt = canvas.getContext('2d');
               const sakuraList = new SakuraList();
