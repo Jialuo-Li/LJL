@@ -117,7 +117,10 @@
                   window.msRequestAnimationFrame ||
                   window.oRequestAnimationFrame;
               let canvas = document.getElementById('canvas_sakura');
-
+              if (!canvas) {
+                console.error('Canvas element not found.');
+                return;
+              }
               let cxt = canvas.getContext('2d');
               const sakuraList = new SakuraList();
               for (let i = 0; i < 50; i++) {
