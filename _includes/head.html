@@ -173,7 +173,14 @@
     }
 
     img.onload = function () {
-        startSakura();
+      var canvas = document.getElementById('canvas_sakura');
+      if (canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        // 设置填充颜色
+        ctx.fillStyle = '#FF0000';
+        // 在画布上绘制一个矩形
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      }
     }
 
     function stopp() {
