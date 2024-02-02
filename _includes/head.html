@@ -181,7 +181,10 @@
 	    if (child) {
 	        child.parentNode.removeChild(child);
 	        window.cancelAnimationFrame(stop);
-	    }
+	    } 
+      else {
+        console.error("No canvas to remove")
+      }
     }
 </script>
 </head>
