@@ -130,7 +130,7 @@
     }
 
     function startSakura() {
-		stopp()
+		    stopp()
         requestAnimationFrame = window.requestAnimationFrame ||
             window.mozRequestAnimationFrame ||
             window.webkitRequestAnimationFrame ||
@@ -173,18 +173,11 @@
     }
 
     img.onload = function () {
-      var canvas = document.getElementById('canvas_sakura');
-      if (canvas.getContext) {
-        var ctx = canvas.getContext('2d');
-        // 设置填充颜色
-        ctx.fillStyle = '#FF0000';
-        // 在画布上绘制一个矩形
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-      }
+      startSakura()
     }
 
     function stopp() {
-        let child = document.getElementById("canvas_sakura");
+        var child = document.getElementById("canvas_sakura");
 	    if (child) {
 	        child.parentNode.removeChild(child);
 	        window.cancelAnimationFrame(stop);
