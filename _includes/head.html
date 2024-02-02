@@ -129,9 +129,15 @@
         return ret;
     }
 
-    function startSakura() {
 
-        requestAnimationFrame = window.requestAnimationFrame ||
+    window.onresize = function () {
+        const canvasSnow = document.getElementById('canvas_sakura');
+        canvasSnow.width = window.innerWidth;
+        canvasSnow.height = window.innerHeight;
+    }
+
+    window.onload = function () {
+      requestAnimationFrame = window.requestAnimationFrame ||
             window.mozRequestAnimationFrame ||
             window.webkitRequestAnimationFrame ||
             window.msRequestAnimationFrame ||
@@ -164,16 +170,6 @@
             sakuraList.draw(cxt);
             stop = requestAnimationFrame(arguments.callee);
         })
-    }
-
-    window.onresize = function () {
-        const canvasSnow = document.getElementById('canvas_sakura');
-        canvasSnow.width = window.innerWidth;
-        canvasSnow.height = window.innerHeight;
-    }
-
-    img.onload = function () {
-      startSakura()
     }
 
     function stopp() {
