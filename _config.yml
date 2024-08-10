@@ -22,7 +22,7 @@ blog_button:
 # Navigation buttons in the front page.
 nav:
     - {title: Days, description: Days in love, url: 'https://jialuo-li.github.io/flower'}
-    # - {title: Another Button, description: A button, url: 'http://example.com'}
+    - {title: Photo Wall, description: Photos, url: 'http://jialuo-li.github.io/Photos'}
 
 # Pagination
 plugins: [jekyll-paginate]
